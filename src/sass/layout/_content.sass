@@ -1,0 +1,823 @@
+// .banner
+.banner
+	min-height: 750px
+	height: 100%
+	position: relative
+	+breakpoint(550px)
+		min-height: 625px
+	&:before
+		content: ""
+		position: absolute 
+		display: block
+		height: 100%
+		width: 100%
+		background: rgba(#4a4044, 0.75)
+		z-index: 1
+		+transform(skew(25deg))
+		right: 50%
+		top: 0
+		bottom: 0
+	&:after
+		content: ""
+		position: absolute
+		display: block
+		height: 100%
+		width: 100%
+		background: rgba(#3c2a34, 0.75)
+		z-index: 1
+		+transform(skew(25deg))
+		left: 50%
+		top: 0
+		bottom: 0
+	// background: url("../img/bgheader.png") no-repeat 
+	// background-size: cover
+	&>.wrapper
+		position: absolute
+		right: 0
+		bottom: 0
+		left: 0
+		top: 0
+.banner-img
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	top: 0
+	// z-index: -1
+	img 
+		height: 100%
+		width: 100%
+		object-fit: cover
+.banner-text
+	color: #fff
+	position: absolute
+	top: 50%
+	margin-top: -66px
+	font-size: 18px
+	line-height: 20px
+	right: 0
+	left: 0
+	letter-spacing: 0.06em
+	z-index: 3
+	padding-left: 57px
+	box-sizing: border-box
+	+breakpoint(1180px)
+		padding-left: 20px
+		padding-right: 20px
+		margin-top: -146px
+		text-align: center
+	+breakpoint(550px)
+		margin-top: -190px
+	a 
+		color: #fff
+	.phone
+		float: left
+		margin-right: 45px
+		&:before
+			+font-icon("phone")
+			color: #fff
+			font-size: 16px
+			display: inline-block
+			margin-right: 16px	
+		+breakpoint(1180px)
+			float: none
+			display: inline-block	
+			margin: 5px 15px
+		+breakpoint(550px)
+			font-size: 15px	
+	.email	
+		float: left
+		&:before
+			+font-icon("mail")
+			color: #fff
+			font-size: 16px
+			display: inline-block
+			vertical-align: bottom
+			margin-right: 16px
+		+breakpoint(1180px)
+			float: none
+			margin: 5px 15px
+			display: inline-block
+		+breakpoint(550px)
+			font-size: 15px
+	.text-last
+		float: right
+		margin-right: 137px
+		+breakpoint(1180px)
+			// float: left
+			margin-right: 0
+			float: none
+			display: block
+			text-align: center
+		+breakpoint(1180px)
+			float: none
+		+breakpoint(550px)
+			font-size: 15px
+	.text
+		font-size: 44px
+		line-height: 68px
+		font-weight: bold
+		letter-spacing: 0.06em
+		text-transform: uppercase
+		display: block
+		clear: both
+		margin-top: 16px
+		+breakpoint(1180px)
+			font-size: 29px
+			line-height: 37px
+			padding: 15px 0px
+			text-align: center
+		+breakpoint(550px)
+			font-size: 18px
+			line-height: 30px
+			margin-top: 0
+		strong
+			font-size: 65px
+			+breakpoint(1180px)
+				font-size: 46px
+			+breakpoint(550px)
+				font-size: 24px
+	.banner-form
+		font-size: 18px
+		text-transform: uppercase
+		line-height: 20px
+		color: #fff
+		background: #a4236e
+		+box-shadow(0px 0px 40px 0px rgba(164,35,110,1))
+		border-radius: 5px
+		display: inline-block
+		position: absolute
+		right: 137px
+		bottom: -105px
+		padding: 16px 35px 12px 26px
+		&:hover
+			background: #ac196e
+		&:active
+			background: #7c1551
+		img 
+			display: inline-block
+			vertical-align: middle
+			margin-right: 25px
+		+breakpoint(1180px)
+			position: static
+			clear: both
+			bottom: 0
+			margin-top: 25px
+			float: none
+			display: inline-block
+		+breakpoint(550px)
+			font-size: 15px
+			line-height: 17px
+// .banner
+
+// latest
+.latest
+	margin-top: -180px
+	position: relative
+	z-index: 2
+	+pie-clearfix
+	padding-bottom: 50px
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		left: 0
+		top: 0
+		background: rgba(#504b4b, 0.04)
+	h3 
+		font-size: 36px
+		line-height: 40px
+		color: #3b3535
+		text-transform: uppercase
+		padding: 65px 0px 46px
+		+breakpoint(767px)
+			font-size: 22px
+			line-height: 24px
+			display: block
+			text-align: center
+		&:before
+			content: ""
+			display: inline-block
+			margin-right: 28px
+			width: 3px
+			height: 26px
+			background: #9a286e
+			border-radius: 3px
+			transform: rotate(21deg)
+			margin-left: 5px
+			box-shadow: 11px -4px 0px 0px rgba(164,35,110,1)
+			+breakpoint(767px)
+				display: none
+		&:after
+			background: #fff
+			content: ""
+			position: absolute
+			width: 100%
+			height: 180px
+			left: -39.1%
+			top: 0
+			z-index: -1
+			+transform(skew(25deg))
+			+breakpoint(1180px)
+				+transform(skew(0deg))
+				left: 0
+
+
+	.latest-container
+		margin-left: -20/1200*100%
+		+breakpoint(550px)
+			margin-left: 0px
+	.latest-item
+		float: left
+		margin-left: 20/1200*100%
+		box-sizing: border-box
+		position: relative
+		width: 280/1200*100%
+		height: 280px
+		text-align: center
+		z-index: 3
+		font-size: 0
+		line-height: 0
+		margin-bottom: 40px
+		// +transition(0.3s)
+		// border: 3px solid transparent
+		+breakpoint(1180px)
+			width: 31.6%
+		+breakpoint(767px)
+			width: 48.3%
+		+breakpoint(550px)
+			width: 100%
+			margin-left: 0
+		
+
+		&:hover
+			.latest-item-img
+				border: 3px solid #a4236e
+				&:before
+					background: #a4236e
+					background: -moz-linear-gradient(to top, #a4236e, rgba(0,0,0,0))
+					background: -webkit-linear-gradient(to top, #a4236e, rgba(0,0,0,0))
+					background: -o-linear-gradient(to top,#a4236e, rgba(0,0,0,0))
+					background: -ms-linear-gradient(to top, #a4236e, rgba(0,0,0,0))
+					background: linear-gradient(to top, #a4236e, rgba(0,0,0,0))
+			
+	.latest-item-img
+		border-radius: 5px
+		overflow: hidden
+		position: absolute
+		bottom: 0
+		top: 0
+		left: 0
+		right: 0
+		+transition(0.2s)
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			top: 80px
+			left: 0
+			z-index: 1
+			display: block
+			right: 0
+			+transition(0.3s)
+			background: #504b4b
+			background: -moz-linear-gradient(to top, #504b4b, rgba(0,0,0,0))
+			background: -webkit-linear-gradient(to top, #504b4b, rgba(0,0,0,0))
+			background: -o-linear-gradient(to top,#504b4b, rgba(0,0,0,0))
+			background: -ms-linear-gradient(to top, #504b4b, rgba(0,0,0,0))
+			background: linear-gradient(to top, #504b4b, rgba(0,0,0,0))
+		img 
+			height: 100%
+			width: 100%
+			object-fit: cover
+	.latest-item-text
+		position: absolute
+		bottom: 30px
+		right: 0
+		left: 0
+		padding: 0px 25px
+		box-sizing: border-box
+		color: #fff
+		font-size: 16px
+		line-height: 20px
+		z-index: 2
+		height: 40px
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+			width: 0
+		p 
+			display: inline-block
+			vertical-align: middle
+	.price
+		font-size: 18px
+		line-height: 30px
+		color: #fff
+		position: absolute
+		bottom: -15px
+		height: 30px
+		z-index: 4
+		left: 0
+		right: 0
+		span
+			display: inline-block
+			background: #a4236e
+			border-radius: 4px
+			padding: 0 20px
+// latest
+
+// ransom
+.ransom
+	// +pie-clearfix
+	position: relative
+	overflow: hidden
+	&:after
+		content: ""
+		background: #281b24
+		height: 194px
+		width: 100%
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		z-index: 2
+		display: block
+	.linear 
+		background: rgba(#ededed, 0.45)
+		height: 3px
+		width: 100%
+		position: absolute
+		top: 320px
+		left: 0
+		right: 0
+		z-index: 4
+	.ransom-bg-l
+		background: url("../img/content-img-1.jpg") no-repeat left bottom
+		background-size: cover
+		position: absolute
+		z-index: 1
+		right: 0
+		left: 0
+		top: 0
+		bottom: 0
+		height: 100%
+		width: 100%
+		&:before
+			content: ""
+			width: 100%
+			height: 100%
+			background: rgba(#30212a, 0.83)
+			z-index: 2
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 0
+			top: 0
+
+	.ransom-bg-r
+		position: absolute
+		z-index: 3
+		left: 50%
+		top: 0
+		width: 500%
+		bottom: 0
+		right: 0
+		background: #fff
+		// &:before
+		// 	content: ""
+		+breakpoint(767px)
+			display: none
+	.text 
+		color: #f8f8f8
+		font-size: 16px
+		line-height: 22px
+		+breakpoint(767px)
+			display: none
+		h4
+			font-size: 40px
+			line-height: 42px
+			margin-top: 115px
+			margin-bottom: 60px
+			+breakpoint(1180px)
+				margin-top: 60px
+				margin-bottom: 40px
+				font-size: 35px
+		p 
+			margin-bottom: 27px
+	.text2
+		display: none
+		position: relative
+		z-index: 5
+		text-align: center
+		padding-bottom: 20px
+		h4
+			font-size: 28px
+			margin-bottom: 20px
+			margin-top: 40px
+		p 
+			font-size: 14px
+			margin-bottom: 15px
+		+breakpoint(767px)
+			display: block
+.ransom-l
+	float: left
+	width: 580/1180*100%
+	position: relative
+	min-height: 910px
+	position: relative
+	z-index: 3
+	padding-right: 20px
+	box-sizing: border-box
+	+breakpoint(767px)
+		float: none
+		display: block
+		width: 100%
+		padding-right: 0
+		min-height: auto
+	&:before
+		content: ""
+		position: absolute
+		width: 100%
+		left: -50%
+		background: #281b24
+		+breakpoint(767px)
+			left: 0
+
+	h3 
+		font-size: 48px
+		color: #f8f8f8
+		line-height: 54px
+		letter-spacing: 0.08em
+		padding: 60px 0px 35px
+		position: relative
+		z-index: 3
+		+breakpoint(1180px)
+			font-size: 37px
+			padding-bottom: 25px
+		+breakpoint(500px)
+			font-size: 28px
+		+breakpoint(370px)
+			padding-bottom: 15px
+
+	.ransom-l-img
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+	.type 
+		color: #a9a7a9
+		font-size: 16px
+		line-height: 16px
+		margin-bottom: 45px
+		+breakpoint(1180px)
+			font-size: 15px	
+	.arrow
+		position: absolute
+		top: 40px
+		right: -38px
+		width: 105px
+		height: 105px
+		border-radius: 100%
+		background: #281b24
+		z-index: 2
+		text-align: right
+		&:before
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+			width: 0
+			content: ""
+		&:after
+			+font-icon("arrow-r")
+			font-size: 20px
+			color: #45303f
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+		+breakpoint(767px)
+			display: none
+	.clock-jewerly
+		width: 100%
+		display: block
+		+pie-clearfix
+		a 
+			color: #fff
+			font-size: 16px
+			text-transform: uppercase
+			line-height: 18px
+			float: left	
+			padding: 15px 7% 13px 5%
+			background: #493e44
+			border-radius: 5px
+			+breakpoint(1180px)
+				float: none
+				display: block
+			&:before
+				display: inline-block
+				margin-right: 25px
+				vertical-align: middle
+			&:hover
+				background: #de419c
+			&.active
+				background: #a4236e
+		.clock
+			margin-right: 20px
+			+breakpoint(1180px)
+				margin-right: 0
+				margin-bottom: 10px
+			&:before
+				+font-icon("clock")
+				font-size: 37px
+		.jewerly
+			&:before
+				+font-icon("diamond")
+				font-size: 27px
+
+.ransom-r
+	float: right
+	width: 600/1180*100%
+	position: relative
+	z-index: 3 
+	min-height: 910px
+	padding-left: 50px
+	box-sizing: border-box
+	+breakpoint(1180px)
+		padding-left: 30px
+	+breakpoint(767px)
+		float: none
+		display: block
+		width: 100%
+		background: #fff
+		padding: 0 20px
+		min-height: auto
+		margin-top: 35px
+		border-radius: 5px
+		// padding: 0 20px
+		// margin: 0 -20px
+		padding-bottom: 1px
+		margin-bottom: 30px
+	.ransom-r-container
+		position: relative
+		z-index: 3
+		+opacity(0)
+		max-height: 0
+		overflow: hidden
+		+transition(0.3s opacity)
+		&.active
+			+opacity(1)
+			max-height: 1500px
+		form
+			font-size: 0
+		h3
+			font-size: 36px
+			line-height: 40px
+			text-transform: uppercase
+			color: #a4236e
+			letter-spacing: 0.06em
+			padding: 68px 0 27px
+			+breakpoint(500px)
+				padding: 30px 0 20px
+			
+			&:before
+				// +font-icon("clock")
+				color: #a4236e
+				margin-left: 10px
+				margin-right: 28px
+				display: inline-block
+				vertical-align: middle
+				+breakpoint(1180px)
+					margin-left: 20px
+				+breakpoint(500px)
+					margin-left: 0
+
+					
+		.clock
+			&:before
+				+font-icon("clock")
+				font-size: 50px
+		.jewerly
+			+breakpoint(500px)
+				font-size: 27px
+			&:before
+				+font-icon("diamond")
+				font-size: 38px
+				font-weight: bold
+				+breakpoint(500px)
+					font-size: 32px
+					margin-right: 16px
+				
+		p 
+			font-size: 16px
+			color: #2c1b26
+			line-height: 22px
+			margin-bottom: 20px
+			clear: both
+			strong 
+				display: inline-block
+			
+	
+
+		input:not([type="checkbox"]), select
+			height: 44px
+			line-height: 44px
+			font-size: 15px
+			color: #2c1b26
+			border: 1px solid #e8e6e6
+			border-radius: 5px
+			box-sizing: border-box
+			padding: 0 15px
+			margin-bottom: 20px
+			+transition(0.3s)
+			+breakpoint(1180px)
+				padding: 0 5px
+			+placeholder
+				line-height: 44px
+				font-size: 15px
+				color: #8f8484
+				+transition(0.5s)
+				+opacity(1)
+			&:hover
+				+placeholder
+					+opacity(0.5)
+			&:focus
+				border: 1px solid #bd6297
+				+placeholder
+					+opacity(0)
+		.info
+			margin-top: 43px
+			select 
+				width: 100%
+
+			input
+				width: 49%
+				&:nth-child(even)
+					margin-right: 2%
+		.check 
+			font-size: 15px
+			line-height: 15px
+			color: #665757
+			margin-bottom: 20px
+			display: block
+			width: 100%
+			clear: both
+			input
+				width: 21px
+				height: 21px
+			>.checkbox
+				width: 21px
+				height: 21px
+				background: url(../img/checkbox.png) no-repeat
+				display: inline-block
+				vertical-align: middle
+			> input
+				position: absolute
+				opacity: 0
+			> span
+				display: inline-block
+				vertical-align: bottom
+				margin-left: 12px
+				color: #665757
+			input:checked + .checkbox
+				background-position: -24px 0
+			input:checked ~ span
+				color: #da2828 
+		.select
+			float: left
+			width: 49%
+			margin-right: 2%
+			position: relative
+			&:nth-of-type(2)
+				margin-right: 0
+			.select-arrow
+				background: #fff
+				height: 40px
+				width: 40px
+				position: absolute
+				right: 2px
+				top: 2px
+				text-align: center
+				pointer-events: none
+				&:after
+					+font-icon("arrow-r")
+					transform: rotate(90deg)
+					margin-top: 14px
+					font-size: 10px
+					color: #9f9696
+					display: inline-block
+				// content: ""
+				// position: absolute
+				// width: 6px
+				// height: 6px
+				// right: 0
+				// top: 10px
+				// border: 1px solid
+				// border-color: transparent transparent #9f9696 #9f9696
+				// z-index: 1
+				// background: #fff
+
+		.telephone-email
+			+pie-clearfix
+		.telephone
+			width: 48%
+			float: left
+			+breakpoint(500px)
+				float: none
+				display: block
+				width: 100%
+		input[type="email"]
+			float: right
+			width: 50%
+			+breakpoint(500px)
+				float: none
+				display: block
+				width: 100%
+		.name
+			width: 100%
+		.download
+			color: #776b73
+			display: inline-block
+			// span 
+			// 	color: #2c1b26
+				// display: inline-block
+		input[type="submit"]
+			color: #fff 
+			background: #a4236e
+			text-transform: uppercase
+			max-width: 220px
+			cursor: pointer
+			display: block
+			+transition(0.3s)
+			margin: 50px auto 40px !important
+			+breakpoint(500px)
+				margin: 30px auto 25px !important
+			&:hover
+				background: #c02b82
+			&:active
+				background: #85215b
+	.photo
+		background: #f7f5f6
+		padding: 15px 20px
+		font-size: 0
+		line-height: 0
+		box-sizing: border-box
+		border-radius: 5px
+		text-align: center
+		.photo-container
+			margin-left: -2.5%
+			+breakpoint(500px)
+				margin-left: 0
+		label
+			position: relative
+			height: 118px
+			width: 22.5%
+			display: inline-block
+			vertical-align: top
+			border: 2px dashed #dad6d7
+			box-sizing: border-box
+			margin-left: 2.5%
+			border-radius: 5px
+			+transition(0.3s)
+			&.active
+				&:after
+					+opacity(0.6)
+			+breakpoint(1180px)
+				width: 47.5%
+				margin-bottom: 2.5%
+			+breakpoint(500px)
+				width: 100%
+				margin-left: 0
+				margin-bottom: 10px
+			&:hover
+				border-color: #d297b9
+				&:after
+					color: #bd6297
+			&:before
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				height: 100%
+				width: 0
+			&:after
+				+font-icon("photo")
+				display: inline-block
+				vertical-align: middle
+				font-size: 35px
+				+transition(0.3s)
+				color: #dad6d7
+		input[type="file"]
+			cursor: pointer
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			width: 100%
+			height: 100%
+			margin: 0
+			left: 0
+			+opacity(0)
+
+
+// ransom

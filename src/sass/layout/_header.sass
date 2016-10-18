@@ -1,0 +1,239 @@
+#header 
+	height: 0
+	position: relative
+	z-index: 10
+	.logo
+		display: inline-block
+		margin-top: 20px
+		margin-left: 40px
+		&:hover
+			+opacity(0.7)
+		+breakpoint(1180px)
+			margin-left: 0
+		+breakpoint(550px)
+			width: 155px
+	// +breakpoint(1180px)
+	// 	height: auto
+	// 	position: fixed
+	// 	top: 0
+	// 	right: 0
+	// 	left: 0
+	// 	width: 100%
+.header-menu
+	float: right
+	margin-top: 89px
+	+breakpoint(1180px)
+		display: none
+	li 
+		float: left
+		margin-right: 59px
+		a 
+			font-size: 18px
+			line-height: 20px
+			color: #ffffff
+			text-transform: uppercase
+			&:hover
+				color: #bd6297
+			&:active
+				color: #be2980
+
+	.home
+		margin-right: 45px
+		margin-top: -5px
+		a 
+			&:before
+				+font-icon("home")
+				font-size: 24px
+				color: #fff
+				display: inline-block
+				vertical-align: middle
+.language
+	float: right
+	margin-top: 80px
+	position: relative
+	+breakpoint(1180px)
+		display: none
+	a 
+		font-size: 18px
+		line-height: 20px
+		color: #ffffff
+		text-transform: uppercase
+		background: rgba(#fff, 0.15)
+		padding: 8px 19px 7px
+		border-radius: 5px
+		position: relative
+		width: 70px
+		box-sizing: border-box
+		display: inline-block
+		&:hover
+			background: rgba(164,35,110, 0.71)
+		&:after
+			content: ""
+			width: 0
+			height: 0
+			border-left: 3px solid transparent
+			border-right: 3px solid transparent
+			border-top: 4px solid #ffffff
+			position: absolute
+			right: 10px
+			top: 50%
+			margin-top: -2px	
+.language-all
+	+opacity(0)
+	max-height: 0px
+	overflow: hidden
+	position: absolute
+	top: 42px
+	+transition(0.4s)
+	a 
+		margin-bottom: 5px
+		&:after
+			display: none
+
+.language-open
+	.language-all
+		+opacity(1)
+		max-height: 100px
+
+
+.mobile-menu
+	position: fixed
+	width: 100%
+	height: 100%
+	right: 20px
+	z-index: 40
+	left: -100%
+	background: rgba(#000, 0.5)
+	+opacity(0)
+	// padding-top: 50px
+	+box-sizing(border-box)
+	overflow: auto
+	.mobile-menu-item
+		float: left
+		background: #222731
+		height: 100%
+		width: 100%
+		min-width: 320px
+		overflow: auto
+		+box-sizing(border-box)
+		padding-bottom: 30px
+		// padding: 60px 20px 0px
+		li 
+			display: block
+			a 
+				font-size: 18px
+				line-height: 20px
+				color: #ffffff
+				text-transform: uppercase
+				display: block
+				padding: 10px 20px
+				border-top: 1px solid rgba(#fff, 0.3)
+				border-bottom: 1px solid rgba(#fff, 0.3)
+				margin-top: -1px
+				&:hover
+					color: #bd6297
+				&:active
+					color: #be2980	
+	.menu-burger
+		position: relative
+		display: block		
+		float: right
+		margin: 20px
+	.home
+		float: left
+		margin: 13px 20px
+		&:before
+			+font-icon("home")
+			font-size: 34px
+			color: #fff
+			display: inline-block
+			vertical-align: middle
+	.language
+		display: block
+		float: none
+		margin: 0px
+		width: 100%
+		text-align: center
+		a 
+			width: auto
+			margin: 20px 20px
+			&:after
+				display: none
+
+		
+
+.menu-burger
+	display: none
+	+transition(0.3s)
+	// display: inline-block
+	position: relative
+	float: right
+	cursor: pointer
+	z-index: 90
+	width: 30px
+	height: 20px
+	margin-top: 84px
+	margin-left: 0px
+	+breakpoint(1180px)
+		display: inline-block
+	+breakpoint(550px)
+		margin-top: 46px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		background: #ffffff
+		height: 4px
+		+transition(0.2s)
+		+backface-visibility(hidden)
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		display: block
+		width: 100%
+		background: #ffffff
+		height: 4px
+		+transition(0.2s)
+		+backface-visibility(hidden)
+	.menu-burger-item
+		position: absolute
+		display: block
+		width: 100%
+		background: #ffffff
+		+transition(0.3s)
+		height: 4px
+		top: 8px
+		left: 0
+
+
+.mobile-menu-open
+	+transition(0.3s)
+	#header
+		background: #20222e
+	.mobile-menu
+		+transition(0.3s)
+		display: block
+		top: 0
+		left: 0
+		+opacity(1)
+		a 
+			font-size: 16px
+	.menu-burger
+		+transition(0.3s)
+		&:before
+			+rotate(45deg)
+			top: 8px
+		&:after
+			+rotate(-45deg)
+			bottom: 8px
+		.menu-burger-item
+			// +transition(0.3s)
+			// +rotate(135deg)
+			// margin-bottom: -3px
+			// margin-top: 3px
+			+opacity(0)

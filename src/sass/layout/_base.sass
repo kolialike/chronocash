@@ -1,0 +1,45 @@
+input, select, textarea
+  -moz-appearance: none
+  -ms-appearance: none
+  -webkit-appearance: none
+  appearance: none
+  outline: none
+
+body
+  font-family: $mp
+  font-weight: 400
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  min-height: 100%
+  height: 100% 
+img     
+  margin: auto 
+  max-width: 100%
+a 
+  text-decoration: none
+  +transition(0.3s)
+a[href^=tel]
+  // text-decoration: none
+  color: #325a6e
+* 
+  padding: 0
+  margin: 0 auto
+
+html
+  min-height: 100%
+  height: 100% 
+
+
+.wrapper
+  position: relative
+  max-width: 1220px
+  min-width: 320px
+  margin: auto
+  padding: 0 20px
+  +box-sizing(border-box)
+
+.global-wrapper
+  width: 100%
+  min-width: 320px
+  min-height: 100%
+  overflow: hidden
