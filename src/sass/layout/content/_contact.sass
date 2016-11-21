@@ -1,0 +1,152 @@
+.contact
+	.latest-container
+		margin-left: 0
+		+pie-clearfix
+.contact-l
+	float: left
+	width: 49%
+	padding-left: 20px
+	box-sizing: border-box
+	+breakpoint(950px)
+		float: none
+		display: block
+		width: 100%
+		margin-bottom: 35px
+	+breakpoint(767px)
+		padding-left: 0
+
+	p 
+		font-size: 30px
+		color: #464344
+		line-height: 34px
+		box-sizing: border-box
+		padding: 35px 0 35px 100px
+		+breakpoint(767px)
+			padding: 25px 0 25px 50px
+			font-size: 20px
+			line-height: 24px
+		strong
+			font-size: 30px
+			color: #221f20
+			display: block
+			+breakpoint(767px)
+				font-size: 20px
+		span 
+			display: block
+	.adress
+		font-size: 24px
+		color: #504b4b
+		background: image-url("contact-img-1.png") no-repeat left center
+		+breakpoint(767px)
+			font-size: 18px
+			background-size: 28px
+	.number
+		background: image-url("contact-img-2.png") no-repeat left center
+		+breakpoint(767px)
+			background-size: 28px
+	.mail
+		background: image-url("contact-img-3.png") no-repeat left center
+		background-position: 0 23px
+		+breakpoint(767px)
+			background-position: 0 14px
+			background-size: 28px
+
+.contact-r
+	float: right
+	background: #fff
+	width: 49%
+	padding: 30px 55px 20px
+	box-sizing: border-box
+	border-radius: 5px
+	position: absolute
+	right: 20px
+	+breakpoint(950px)
+		position: static
+		float: none
+		display: block
+		width: 100%
+	+breakpoint(767px)
+		padding: 20px
+	h4
+		font-size: 30px
+		line-height: 36px
+		color: #3b3535
+		text-transform: uppercase
+		padding: 15px 0 40px
+		display: block
+		+breakpoint(950px)
+			text-align: center
+
+	input, textarea, select
+		height: 44px
+		line-height: 45px
+		font-size: 15px
+		color: #2c1b26
+		border: 1px solid #e8e6e6
+		border-radius: 5px
+		box-sizing: border-box
+		padding: 0 15px
+		margin-bottom: 20px
+		width: 100%
+		font-family: $mp
+		letter-spacing: 0.04em
+		font-weight: 400
+		// display: block
+		+transition(0.3s)
+		+breakpoint(1180px)
+			padding: 0 10px
+		+placeholder
+			line-height: 44px
+			font-size: 15px
+			color: #8f8484
+			+transition(0.5s)
+			+opacity(1)
+		&:hover
+			+placeholder
+				+opacity(0.5)
+		&:focus
+			border: 1px solid #bd6297
+			+placeholder
+				+opacity(0)
+	textarea
+		height: 180px
+		resize: none
+		+breakpoint(767px)
+			height: 140px
+	input[type="email"]
+		width: 230/477*100%
+		float: left
+		+breakpoint(767px)
+			float: none
+			display: block
+			width: 100%
+	.telephone
+		float: right
+		width: 220/477*100%
+		+breakpoint(767px)
+			float: none
+			display: block
+			width: 100%
+	input[type="submit"]
+		color: #fff 
+		background: #a4236e
+		text-transform: uppercase
+		max-width: 220px
+		cursor: pointer
+		display: block
+		+transition(0.3s)
+		margin: 10px auto 
+		// +breakpoint(500px)
+		// 	margin: 20px auto 15px
+		&:hover
+			background: #c02b82
+		&:active
+			background: #85215b
+
+.map
+	// position: relative
+	// z-index: 3
+	// margin-top: -155px
+	iframe
+		+breakpoint(767px)
+			height: 400px

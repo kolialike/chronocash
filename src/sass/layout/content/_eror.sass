@@ -1,0 +1,158 @@
+.eror
+	text-align: right
+	position: absolute
+	height: 100%
+	width: 100%
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	background: image-url("eror-bg.jpg")
+	// padding-top: 37px	
+	box-sizing: border-box
+	overflow: hidden
+	font-size: 0
+	line-height: 0
+	// +breakpoint(767px)
+		// text-align: left
+	&:after
+		content: ""
+		position: absolute
+		display: block
+		height: 100%
+		width: 100%
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		z-index: 1
+		background: rgba(#000, 0.69)
+	&>.wrapper
+		height: 100%
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+			width: 0
+.eror-container
+	max-width: 580px
+	width: 100%
+	display: inline-block
+	vertical-align: middle
+	text-align: left
+	// min-height: 820px
+	position: relative
+	z-index: 2
+	color: #fff
+	height: 820px
+
+	&:after
+		content: ""
+		background: image-url("eror-img.jpg")
+		position: absolute
+		top: 0
+		width: 1585px
+		height: 819px
+		left: -1040px
+		z-index: -2
+		// +breakpoint(767px)
+			// left: -1025px
+	&:before
+		content: ""
+		width: 180px
+		position: absolute
+		right: -20px
+		top: 0
+		bottom: 0
+		height: 100%
+		z-index: -1
+		background: #000
+		background: -moz-linear-gradient(to left, #000, rgba(0,0,0,0))
+		background: -webkit-linear-gradient(to left, #000, rgba(0,0,0,0))
+		background: -o-linear-gradient(to left,#000, rgba(0,0,0,0))
+		background: -ms-linear-gradient(to left, #000, rgba(0,0,0,0))
+		background: linear-gradient(to left, #000, rgba(0,0,0,0))
+	.add-favorite
+		font-size: 22px
+		line-height: 24px
+		color: #a4236e
+		margin-top: 30px
+		display: block
+		padding: 50px 30px 30px
+		letter-spacing: 0.04em
+		position: relative
+		// padding-left: 30px
+		margin-left: -30px
+		+breakpoint(767px)
+			font-size: 18px
+			line-height: 22px
+		&:hover
+			&:after
+				+opacity(0.5)
+		&:before
+			+font-icon("shape")
+			font-size: 85px
+			display: inline-block
+			vertical-align: middle
+			color: #fff 
+			opacity: 0.05
+			margin-top: -15px
+			margin-right: -40px
+			position: relative
+			z-index: 1
+		&:after
+			+transition(0.2s)
+			content: ""
+			background: image-url("eror-circle.png") no-repeat -10px -18px
+			position: absolute
+			left: 0
+			top: 0
+			+opacity(0)
+			z-index: 3
+			height: 120px
+			width: 152px
+	.logo-eror
+		padding-bottom: 40px
+		margin-bottom: 50px
+		position: relative
+		display: block
+		padding-top: 30px
+		+breakpoint(767px)
+			padding-bottom: 30px
+			margin-bottom: 30px
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			height: 1px
+			width: 500%
+			left: -60px
+			bottom: 0
+			background: rgba(#fff, 0.08)
+	p 
+		font-size: 20px
+		line-height: 46px
+		display: block
+		letter-spacing: 0.04em
+		margin-bottom: 60px
+		text-transform: uppercase
+		+breakpoint(767px)
+			line-height: 30px
+			font-size: 16px
+			margin-bottom: 35px
+		strong
+			font-weight: bold
+			display: block
+			font-size: 36px
+			+breakpoint(767px)
+				font-size: 24px
+	span
+		font-size: 16px
+		letter-spacing: 0.04em
+		line-height: 20px
+		display: block
+		+breakpoint(767px)
+			font-size: 15px
+		strong
+			font-weight: bold
